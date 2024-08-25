@@ -77,7 +77,7 @@ function App() {
 
 export default App;
 */
-
+/*
 import UserProfile from './components/UserProfile';
 
 function App() {
@@ -86,6 +86,19 @@ function App() {
           <UserProfile name="Alice" age="25" bio="Loves hiking and photography" />
       </div>
   );
+}
+
+export default App;
+*/
+import Counter from './components/Counter';
+
+function App() {
+    return (
+        <div>
+            <h1>Counter Application</h1>
+            <Counter />
+        </div>
+    );
 }
 
 export default App;
