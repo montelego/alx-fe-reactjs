@@ -1,4 +1,4 @@
-// src/components/ProfilePage.jsx
+// src/ProfilePage.jsx
 import React from 'react';
 import UserInfo from './UserInfo';
 

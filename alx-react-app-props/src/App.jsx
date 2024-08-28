@@ -77,6 +77,7 @@ function App() {
 
 export default App;
 */
+
 /*
 import UserProfile from './components/UserProfile';
 
@@ -93,7 +94,7 @@ export default App;
 
 // src/App.jsx
 import React from 'react';
-import ProfilePage from './components/ProfilePage';
+import ProfilePage from './ProfilePage';
 import UserContext from './UserContext';
 
 function App() {
