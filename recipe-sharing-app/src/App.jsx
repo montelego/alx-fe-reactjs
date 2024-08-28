@@ -36,6 +36,7 @@ function App() {
 export default App
 */
 
+/*
 import React from 'react';
 import RecipeList from './components/RecipeList';
 import AddRecipeForm from './components/AddRecipeForm';
@@ -49,5 +50,22 @@ const App = () => {
     </div>
   );
 };
+
+export default App;
+*/
+
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import RecipeDetails from './RecipeDetails';
+import HomePage from './HomePage'; // assuming you have a HomePage component
+
+const App = () => (
+  <Router>
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/recipe/:recipeId" element={<RecipeDetails />} />
+    </Routes>
+  </Router>
+);
 
 export default App;
