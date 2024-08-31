@@ -72,6 +72,7 @@ const App = () => (
 export default App;
 */
 
+/*
 // src/App.js
 import React from 'react';
 import SearchBar from './components/SearchBar'; // Adjust the path if necessary
@@ -84,5 +85,45 @@ const App = () => (
     <RecipeList />
   </div>
 );
+
+export default App;
+*/
+
+import React, { useEffect } from 'react';
+import FavoritesList from './components/FavoritesList';
+import RecommendationsList from './components/RecommendationsList';
+import { useRecipeStore } from './store/recipeStore';
+
+const App = () => {
+  const setRecipes = useRecipeStore((state) => state.setRecipes);
+
+  useEffect(() => {
+    // Fetch recipes from an API or define them statically
+    const fetchRecipes = async () => {
+      // Example static data
+      const recipesData = [
+        { id: 1, title: 'Spaghetti Bolognese', description: 'A classic Italian dish.' },
+        { id: 2, title: 'Chicken Curry', description: 'A spicy and savory curry.' },
+        { id: 3, title: 'Vegetable Stir Fry', description: 'A quick and healthy meal.' },
+        // Add more recipes as needed
+      ];
+      setRecipes(recipesData);
+    };
+
+    fetchRecipes();
+  }, [setRecipes]);
+
+  return (
+    <div style={{ padding: '32px' }}>
+      <header>
+        <h1>Recipe Sharing Application</h1>
+      </header>
+      <main>
+        <FavoritesList />
+        <RecommendationsList />
+      </main>
+    </div>
+  );
+};
 
 export default App;
