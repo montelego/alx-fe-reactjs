@@ -92,6 +92,7 @@ function App() {
 export default App;
 */
 
+/*
 // src/App.jsx
 import React from 'react';
 import ProfilePage from './ProfilePage';
@@ -105,6 +106,36 @@ function App() {
       <ProfilePage />
     </UserContext.Provider>
   );
+}
+
+export default App;
+*/
+
+import React from 'react';
+import UserProfile from './components/UserProfile';
+// If using context
+// import UserContext from './contexts/UserContext';
+
+function App() {
+    // Example props data
+    const user = {
+        name: 'John Doe',
+        age: 30,
+        bio: 'A passionate developer.'
+    };
+
+    // If using context
+    // return (
+    //     <UserContext.Provider value={user}>
+    //         <UserProfile />
+    //     </UserContext.Provider>
+    // );
+
+    return (
+        <div>
+            <UserProfile name={user.name} age={user.age} bio={user.bio} />
+        </div>
+    );
 }
 
 export default App;
