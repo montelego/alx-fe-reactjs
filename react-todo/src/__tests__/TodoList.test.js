@@ -30,3 +30,4 @@ test('deletes a todo', () => {
   fireEvent.click(screen.getAllByText('Delete')[0]);
   expect(firstTodo).not.toBeInTheDocument();
 });
+
