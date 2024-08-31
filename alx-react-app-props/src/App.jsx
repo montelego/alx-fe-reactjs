@@ -110,7 +110,7 @@ function App() {
 
 export default App;
 */
-
+/*
 import React from 'react';
 import UserProfile from './components/UserProfile';
 // If using context
@@ -135,6 +135,27 @@ function App() {
         <div>
             <UserProfile name={user.name} age={user.age} bio={user.bio} />
         </div>
+    );
+}
+
+export default App;
+*/
+
+import React from 'react';
+import UserProfile from './components/UserProfile';
+import UserContext from './contexts/UserContext';
+
+function App() {
+    const user = {
+        name: 'John Doe',
+        age: 30,
+        bio: 'A passionate developer.'
+    };
+
+    return (
+        <UserContext.Provider value={user}>
+            <UserProfile />
+        </UserContext.Provider>
     );
 }
 
