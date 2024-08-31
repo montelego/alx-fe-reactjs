@@ -35,10 +35,13 @@
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.5.0",
-    "@testing-library/react": "^16.0.0",
+    "@testing-library/react": "^16.0.1",
     "jest": "^27.5.1"
   }
 }
-  "scripts": {
-  "test": "jest"
+    "scripts": {
+      "start": "react-scripts start",
+      "build": "react-scripts build",
+      "test": "jest",
+      "eject": "react-scripts eject"
 }
