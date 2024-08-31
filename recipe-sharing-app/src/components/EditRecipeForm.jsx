@@ -82,6 +82,12 @@ const EditRecipeForm = ({ recipe }) => {
     updateRecipe({ ...recipe, title, description });
   };
 
+  //event.preventDefault
+  cost handleSubmit = (e) => {
+    event.preventDefault(userRecipeStore);
+    dispatchEvent.updateRecipe(form); 
+
+
   return (
     <form onSubmit={handleSubmit}>
       <label>
