@@ -54,6 +54,7 @@ const App = () => {
 export default App;
 */
 
+/*
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import RecipeDetails from './RecipeDetails';
@@ -66,6 +67,22 @@ const App = () => (
       <Route path="/recipe/:recipeId" element={<RecipeDetails />} />
     </Routes>
   </Router>
+);
+
+export default App;
+*/
+
+// src/App.js
+import React from 'react';
+import SearchBar from './components/SearchBar'; // Adjust the path if necessary
+import RecipeList from './components/RecipeList'; // Adjust the path if necessary
+
+const App = () => (
+  <div>
+    <h1>Recipe Sharing App</h1>
+    <SearchBar />
+    <RecipeList />
+  </div>
 );
 
 export default App;
