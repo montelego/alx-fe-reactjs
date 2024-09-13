@@ -19,4 +19,24 @@
       ]
     }
   ]
+
+  
+  [
+    {
+      "id": 1,
+      "title": "Spaghetti Bolognese",
+      "description": "A classic Italian pasta dish with rich, meaty sauce.",
+      "image": "/images/spaghetti-bolognese.jpg",
+      "ingredients": ["Spaghetti", "Ground beef", "Tomato sauce", "Onion", "Garlic"],
+      "instructions": ["Boil spaghetti", "Cook ground beef", "Add tomato sauce", "Simmer and combine"]
+    },
+    {
+      "id": 2,
+      "title": "Chicken Curry",
+      "description": "A flavorful and spicy chicken curry with rice.",
+      "image": "/images/chicken-curry.jpg",
+      "ingredients": ["Chicken", "Curry powder", "Coconut milk", "Onion", "Garlic"],
+      "instructions": ["Cook chicken", "Add curry powder", "Simmer with coconut milk"]
+    }
+  ]
   
