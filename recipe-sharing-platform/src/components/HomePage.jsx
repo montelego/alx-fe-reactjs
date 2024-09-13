@@ -121,27 +121,47 @@ export default HomePage;
 
 
 
-import React from 'react';
-import { Link } from 'react-router-dom';
-import recipes from '../data/recipes.json'; // Assuming recipes.json is in src/data/
+// import React from 'react';
+// import { Link } from 'react-router-dom';
+// import recipes from '../data/recipes.json'; // Assuming recipes.json is in src/data/
+
+// const HomePage = () => {
+//   return (
+//     <div className="container mx-auto p-4">
+//       <h1 className="text-4xl font-bold mb-6">Recipe Sharing Platform</h1>
+//       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+//         {recipes.map((recipe) => (
+//           <div key={recipe.id} className="bg-white shadow-md rounded-lg overflow-hidden">
+//             {/* Wrap the recipe card with Link to navigate to the RecipeDetail page */}
+//             <Link to={`/recipe/${recipe.id}`}>
+//               <img src={recipe.image} alt={recipe.title} className="w-full h-48 object-cover" />
+//               <div className="p-4">
+//                 <h2 className="text-2xl font-bold">{recipe.title}</h2>
+//                 <p className="text-gray-700 mt-2">{recipe.description}</p>
+//               </div>
+//             </Link>
+//           </div>
+//         ))}
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default HomePage;
+
+
+import AddRecipeForm from '../components/AddRecipeForm'; // Import the form component
 
 const HomePage = () => {
   return (
-    <div className="container mx-auto p-4">
-      <h1 className="text-4xl font-bold mb-6">Recipe Sharing Platform</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {recipes.map((recipe) => (
-          <div key={recipe.id} className="bg-white shadow-md rounded-lg overflow-hidden">
-            {/* Wrap the recipe card with Link to navigate to the RecipeDetail page */}
-            <Link to={`/recipe/${recipe.id}`}>
-              <img src={recipe.image} alt={recipe.title} className="w-full h-48 object-cover" />
-              <div className="p-4">
-                <h2 className="text-2xl font-bold">{recipe.title}</h2>
-                <p className="text-gray-700 mt-2">{recipe.description}</p>
-              </div>
-            </Link>
-          </div>
-        ))}
+    <div>
+      {/* Add the form to the page */}
+      <AddRecipeForm />
+
+      {/* You can add more content or components below */}
+      <div className="other-content">
+        <h2>Other Recipes</h2>
+        {/* Other components */}
       </div>
     </div>
   );
