@@ -1,0 +1,22 @@
+[
+    {
+      "id": 1,
+      "title": "Spaghetti Bolognese",
+      "image": "/images/spaghetti-bolognese.jpg",
+      "ingredients": [
+        "200g spaghetti",
+        "100g ground beef",
+        "1 onion, chopped",
+        "2 cloves garlic, minced",
+        "400g canned tomatoes"
+      ],
+      "instructions": [
+        "Cook the spaghetti according to package instructions.",
+        "Heat oil in a pan, add onions and garlic, and sauté until soft.",
+        "Add ground beef and cook until browned.",
+        "Stir in tomatoes and simmer for 20 minutes.",
+        "Serve the sauce over the cooked spaghetti."
+      ]
+    }
+  ]
+  
