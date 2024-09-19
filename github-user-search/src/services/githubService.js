@@ -22,22 +22,11 @@
 //   }
 // };
 
-import axios from 'axios';
 
-// Function to fetch user data based on username, location, and repo count
-export const fetchAdvancedUserData = async (username, location, minRepos) => {
-  const query = [];
-
-  if (username) query.push(`user:${username}`);
-  if (location) query.push(`location:${location}`);
-  if (minRepos) query.push(`repos:>${minRepos}`);
-
-  const searchQuery = query.join('+'); // Construct the query string
-
-  try {
-    const response = await axios.get(`https://api.github.com/search/users?q=${searchQuery}`);
-    return response.data;
-  } catch (error) {
-    throw new Error('Error fetching data from GitHub API');
-  }
+// githubService.js
+export const searchUsers = async (username, location, minRepos) => {
+  const query = `${username ? `user:${username}` : ''}${location ? ` location:${location}` : ''}${minRepos ? ` repos:${minRepos}` : ''}`;
+  const response = await fetch(`https://api.github.com/search/users?q=${encodeURIComponent(query)}`);
+  const data = await response.json();
+  return data;
 };
